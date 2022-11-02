@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #a599ff;
+    background-image: url(../images/logo.png)
+    /* background: #a599ff; */
     /* background: #f99; */
 }
 
