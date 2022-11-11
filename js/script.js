@@ -11,7 +11,6 @@ class Memorama {
 
         this.card1 = null;
         this.card2 = null;
-
         this.availableImages = [1, 2, 3, 4, 5, 6, ,7 ,8, 9];
         this.orderForThisRound = [];
         this.cards = Array.from( document.querySelectorAll(".board-game figure") );
@@ -59,7 +58,7 @@ class Memorama {
 
         setTimeout(() => {
             this.closeCards();
-        }, 10000);
+        }, 1000);
 
     }
 
@@ -88,26 +87,24 @@ class Memorama {
         const clickedCard = e.target;
 
         if (this.canPlay && !clickedCard.classList.contains("opened")) {
-            
             clickedCard.classList.add("opened");
             this.checkPair( clickedCard.dataset.image );
-
         }
 
     }
 
     checkPair(image) {
 
-        if (!this.card1) this.card1 = image;
+        if (!this.card1) {
+            this.card1 = image;
+        }
         else this.card2 = image;
 
         if (this.card1 && this.card2) {
             
             if (this.card1 == this.card2) {
-
                 this.canPlay = false;
-                setTimeout(this.checkIfWon.bind(this), 300)
-                
+                setTimeout(this.checkIfWon.bind(this), 300)                
             }
             else {
 

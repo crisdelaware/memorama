@@ -7,7 +7,7 @@
 main {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     max-width: 1000px;
     margin: auto;
 }
@@ -59,4 +59,5 @@ figure .searched-image {
     backface-visibility: hidden;
     height: 100%;
     overflow: hidden;
+    background-color: green;
 }
